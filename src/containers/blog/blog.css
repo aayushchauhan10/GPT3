@@ -1,0 +1,96 @@
+.gpt3__blog{
+    display: flex;
+    flex-direction: column;
+    /* padding: 5rem 5rem; */
+}
+
+.gpt3__blog-heading{
+    margin-bottom: 3rem;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 45px;
+}
+
+.gpt3__blog-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.gpt3__blog-container__groupA{
+    /* display: flex; */
+    flex: 1;
+    margin-right: 2rem;
+}
+.gpt3__blog-container__groupB{
+    display: grid;
+    flex: 2;
+    grid-column: 2;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    
+}
+
+@media screen and (max-width: 1000px){
+    .gpt3__blog-container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .gpt3__blog-container__groupA{
+        margin: 2rem 0 0 0;    
+    }
+
+    .gpt3__blog-container__groupA .gpt3__blog-container_article{
+        width: 48%;
+    }
+    .gpt3__blog-container__groupA .gpt3__blog-container_article-image{
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .gpt3__blog-container .gpt3__blog-container_article-date_title h3{
+        font-size: 18px;
+        line-height: 32px;
+    }
+    .gpt3__blog-container .gpt3__blog-container_article-date_title p{
+        font-size: 8px;
+        line-height: 24px;
+    }
+    .gpt3__blog-heading h1{
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .gpt3__blog-container{
+        display: flex;
+    }
+    .gpt3__blog-container__groupA .gpt3__blog-container_article{
+        width: 100%;
+    }
+    .gpt3__blog-container__groupB{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .gpt3__blog-container__groupA{
+        margin: 0 2.5rem;
+        
+    }
+    .gpt3__blog-heading h1{
+        font-size: 16px;
+        margin: 0;
+        line-height: 22px;
+    }
+
+    .gpt3__blog-container__groupA .gpt3__blog-container_article-image{
+        height: 32%;
+    }
+    .gpt3__blog-container__groupB{
+        margin: 0rem 2.5rem 2rem 2.5rem ;
+
+    }
+}
